@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<export-config xmlns="http://www.e-pics.ethz.ch/ns/integration">
+	<system>
+		<exiftool path="D:/temp/exiftool.exe" />
+	</system>
+	
+	<cumulus>
+		<server>www.e-pics.ethz.ch</server>
+		<catalogs>
+			<catalog>Cumulus Samples</catalog>
+		</catalogs>
+		<user>sample-exporter</user>
+		<password>sample</password>
+	</cumulus>
+	
+	<metadata>				
+		<!--  <query>('Freigabe Web' is 'Internet') and ('Bildcode' contains  'Com_F61-00094-0002')</query> -->
+		<!--  <query>('Bildcode' contains  'Com_F61-0009')</query> -->
+		
+		<query>('Freigabe Web' is 'Internet')</query>		
+	</metadata>
+		
+	<output>
+		<!-- all files in datadir are copied to the destination -->
+		<datadir>export-ba/data</datadir>
+		
+		<index>
+			<baseUrl>http://www.e-pics.ethz.ch/index/ETHBIB.Bildarchiv/</baseUrl>
+			<catalogUrl>http://ba.e-pics.ethz.ch/</catalogUrl>
+						
+			<segmentationCount>500</segmentationCount>
+			<stylesheet>export-ba/data/epics-index.xsl</stylesheet>	
+			<imageSize>200x200</imageSize>
+			
+			<targetDirectory>T:/SampleXPort/ETHBIB.Bildarchiv</targetDirectory>	
+			<viewSet>ETHBIB-BA-Exporter</viewSet>
+			
+			<imageDirectory>T:/SampleXPort/ETHBIB.Bildarchiv/thumbnails</imageDirectory>
+			<writeXML>yes</writeXML>
+			<writeSitemap>yes</writeSitemap>
+			<sitemapFile gzip="yes" lang="DE">T:/SampleXPort/sitemap-ethbib-bildarchiv.xml</sitemapFile>
+		</index>
+		
+		<record>
+			<imageDirectory>T:/SampleXPort/ETHBIB.Bildarchiv/images</imageDirectory>
+			<linkUrl>http://ba.e-pics.ethz.ch/link.jsp?id=$1</linkUrl>
+			
+			<imageSize>640x480</imageSize>
+			<viewSet>ETHBIB-BA-Google</viewSet>
+			
+			<watermark>export-ba/cc-bildarchiv-25.png</watermark>
+			<watermarkPos>bl</watermarkPos><!--  bl, tl, tr, br -->
+			
+			<stylesheet>export-ba/data/epics-record.xsl</stylesheet>	
+			<writeXML>yes</writeXML>
+				
+			<!-- <serialize>text/html</serialize> -->	
+		</record>
+		
+		
+	</output>
+
+</export-config>
