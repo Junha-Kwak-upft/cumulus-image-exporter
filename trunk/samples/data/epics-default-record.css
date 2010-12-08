@@ -1,0 +1,195 @@
+/**
+ * E-PICS offline record export default CSS stylesheet
+ * Kai Jauslin kai.jauslin@library.ethz.ch, September 2008
+ */
+ 
+body {
+	background-color:#303030;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	font-size: 10pt;
+	text-align:center;
+	color: white;				
+}
+
+#centered {
+	margin-left:auto;
+	margin-right:auto;
+	width:800px;
+	text-align:left;
+}
+
+#image-frame {
+}
+
+#image-frame img {					
+	border:6px solid white;	
+	background-color:white;
+	padding:4px;
+}
+
+.image-metadata {
+	table-layout: fixed;
+	border-collapse:collapse;
+	width: 100%;	
+	caption-side:top;
+}
+.image-metadata tr {
+	border-bottom: 1px dotted gray;	
+	vertical-align: top;
+}
+.image-metadata td, .image-metadata th {
+	border-bottom: 1px dotted gray;	
+}
+.image-metadata th {
+	color:#B0B0B0;
+	font-weight:normal;
+	padding-right: 1em;
+	padding-bottom:2px;
+	vertical-align: top;
+}
+.image-metadata ul {
+	padding-left:0.5em;
+	margin-bottom:1em;
+	margin-top:0;
+	margin-left:0;
+	list-style-position:inside;
+}
+
+caption {			
+	text-align:left;
+	font-weight:bold;
+}
+caption p {
+	margin-top:2em;
+	margin-bottom:1em;
+	border-bottom:1px dotted white;
+	padding-bottom:0.1em;
+}
+.tinytab {
+	background: transparent url(nav-tab-left.png) top left no-repeat;
+	margin-top:2em;
+	margin-bottom:0;
+	margin-right:8px;
+	font-size:8pt;	
+	height:15px;
+	padding-bottom:8px;
+	padding-top:6px;
+	border-bottom:1px solid #484848;	
+	overflow:visible;
+}
+.tinytab span {
+	background: transparent url(nav-tab-right.png) top right no-repeat;
+	padding-right:40px;
+	padding-top:6px;
+	padding-bottom:8px;
+	margin-left:11px;
+}
+#sheet {
+	margin-top:0;
+	padding: 0 6px 0px 0px;
+	border:1px solid black;
+	border-right:0;
+	border-top:0;
+	border-bottom:0;border:0px solid blue;
+	background:transparent url(sheet-shadow-right.png) top right repeat-y;
+}
+#sheet-box {
+	border:0px solid red;
+	padding-bottom:4px;
+	background:transparent url(sheet-shadow-bottom.png) bottom right no-repeat;
+}
+#inner-sheet {
+	background:black url(sheet-background.png) top left repeat-x;
+	padding: 0 24px 1px 12px;
+}
+
+#footer {
+	margin-top:2em;
+	margin-bottom:2em;
+}
+
+#navigation {
+	position:absolute;
+	right:0;
+	bottom:0;
+	width:50%;
+	text-align:right;	
+	color:#999999;
+}
+
+#header {
+	position:relative;	
+	width:795px;
+}
+
+#header img {
+	border:0;
+}
+
+
+
+/* floats clearfix */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+
+
+/* --- */
+
+.infobox {
+	color:0;
+	margin-top:2.5em;
+	margin-bottom:2.5em;
+	padding:0;
+	padding-left:12px;
+	padding-right:12px;
+	color:#CCCCCC;
+	line-height:1.3em;
+	border:1px dotted white;
+}
+.infobox p {
+	margin-top:0.5em;
+}
+.infobox ul {
+	margin-bottom:0.5em;
+}
+ul {
+	list-style:square;
+}
+a {
+	color:white;
+	text-decoration:none;
+}
+a:hover {
+	border-bottom:1px dotted silver;
+}
+
+.navigation {
+	color:silver;
+}
+
+h1 {
+	text-transform:uppercase;
+	font-weight:900;
+	margin-top:0;
+	padding-top:0.5em;
+}
+

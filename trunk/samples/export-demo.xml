@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<export-config xmlns="http://www.e-pics.ethz.ch/ns/integration">
+	<system>
+		<exiftool path="D:/temp/exiftool.exe" />
+	</system>
+	
+	<cumulus>
+		<server>www.e-pics.ethz.ch</server>
+		<catalogs>
+			<catalog>XXX</catalog>
+		</catalogs>
+		<user>google-XXX</user>
+		<password>XXX</password>
+	</cumulus>
+	
+	<metadata>				
+		<query>('Freigabe Web' is 'Internet') and ('Bildcode' contains  'Ans_05035-001')</query>
+		<!--  <query>('Bildcode' contains  'Com_FC25-0010-024') and ('Freigabe Web' is 'Internet')</query> -->
+		<!--  <query>(('Categories' contains  '$Bestaende:Heim, Albert (1849-1937)') or ('Categories' contains 'Neuseeland 1901-02, Reise')) and ('Freigabe Web' is 'Internet')</query> -->
+		<!--  <query>('Bildcode' contains  'Com_LC2259-001-003') and ('Freigabe Web' is 'Internet')</query> -->
+	</metadata>
+		
+	<output>
+		<!-- all files in datadir are copied to the destination -->
+		<datadir>samples/data</datadir>
+		
+		<index>
+			<baseUrl>http://www.e-pics.ethz.ch/index/ETHBIB.Bildarchiv/</baseUrl>
+			<catalogUrl>http://ba.e-pics.ethz.ch/</catalogUrl>
+						
+			<segmentationCount>50</segmentationCount>
+			<stylesheet>samples/data/epics-index.xsl</stylesheet>	
+			<imageSize>200x200</imageSize>
+			
+			<targetDirectory>c:/temp/xport</targetDirectory>	
+			<viewSet>ETHBIB-BA-Google</viewSet>
+			
+			<imageDirectory>c:/temp/xport/thumbnails</imageDirectory>
+			<writeXML>yes</writeXML>
+			<writeSitemap>yes</writeSitemap>
+			<sitemapFile gzip="yes" lang="de">c:/temp/xport/sitemap-ethbib-bildarchiv.xml</sitemapFile>
+		</index>
+		
+		<record>
+			<imageDirectory>c:/temp/xport/images</imageDirectory>
+			<linkUrl>http://ba.e-pics.ethz.ch/link?id=$1</linkUrl>
+			
+			<imageSize>640x480</imageSize>
+			<viewSet>ETHBIB-BA-Google</viewSet>
+			
+			<watermark>samples/cc-bildarchiv-25.png</watermark>
+			<watermarkPos>bl</watermarkPos><!--  bl -->
+			
+			<stylesheet>samples/data/epics-record.xsl</stylesheet>	
+			<writeXML>yes</writeXML>
+				
+			<!-- <serialize>text/html</serialize> -->	
+		</record>
+		
+		
+	</output>
+
+</export-config>

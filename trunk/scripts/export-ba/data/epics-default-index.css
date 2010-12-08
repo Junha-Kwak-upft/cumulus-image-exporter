@@ -1,0 +1,158 @@
+/**
+ * E-PICS offline export default CSS stylesheet
+ * Kai Jauslin kai.jauslin@library.ethz.ch
+ * September 2007
+ *
+ * "Gray"
+ */
+ 
+body {
+	background-color:#303030;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	font-size: 10pt;
+	text-align:center;
+	color: white;			
+}
+ul {
+	list-style:square;
+}
+body #centerPage {
+	padding-left:0;
+	width:800px; 
+	text-align:left;
+	margin:0px auto; 
+}
+h1 {
+	font-weight:bold;
+}
+h1 img {
+	border:0;
+}
+a {
+	color:white;
+	text-decoration:none;
+}
+a:hover {
+	border-bottom:1px dotted silver;
+}
+
+.navigation {
+	color:silver;
+}
+
+.infobox {
+	color:#CCCCCC;
+	margin-top:2em;
+	padding:6px; 
+	padding-left:8px;
+	padding-right:8px;
+	margin-bottom:2em;
+	border:1px solid gray; /*#FA4001;*/
+	line-height:1.3em;
+}
+
+.infobox p {
+	margin-top:0.3em;
+	margin-bottom:0.3em;
+}
+
+.record {
+	margin-bottom:2em;
+	padding-bottom:2em;
+	border-bottom:1px dotted gray;
+	width:100%;
+}
+		
+.thumbnail img {
+	float:left;
+	border:7px solid white;
+	margin-top:0.35em;
+}
+.thumbnail a {
+	margin:0;padding:0;
+}
+.fieldLine {
+	border-bottom:1px dotted #505050;
+	margin-bottom:0.25em;
+	margin-left:240px;	
+	padding:0; 
+	color:#FFFFFF;
+}
+.fieldName {				
+	color:#B0B0B0; 
+	border:0px dotted blue;	
+	font-size:75%;	
+	margin-top:0.5em;					
+}			
+.recordTitle { 
+	margin-left:240px;
+	font-weight: bold;
+	
+	font-size:12pt;
+	min-height:1.4em;
+	border-bottom:0px dotted gray;
+	margin-bottom:0.75em;
+	letter-spacing:0.05em;
+	text-transform:uppercase;
+	color:#CCCCCC;				
+}
+.note {
+	font-family: Arial;
+	font-size:8pt;
+	color:#A0A0A0;
+	margin-top:1em;
+	font-family: Arial;
+	font-size:10pt;
+	color:#A0A0A0;
+}
+
+.categoryDisplay {							
+}
+
+.indexTitle {
+	font-size:24px;
+	margin-bottom:1em;
+}
+.footer {	
+	padding-top: 2em;
+	position:relative;
+	top:0;
+}
+#logos {
+	
+}
+#logos #logo_eth {
+	margin-right:10px;
+}
+#logos img {
+	border:0;
+}
+#copyright {
+	padding-bottom:2em;
+}
+.search {
+	padding-bottom:1em;
+}
+.search p {
+	color:#A0A0A0;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
